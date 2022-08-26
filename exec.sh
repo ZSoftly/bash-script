@@ -12,19 +12,18 @@ docker -v
 # Hold the terminal for few seconds
 sleep 3
 
-# Displaying the number of containers present
-echo "Your docker containers are: "
-docker ps -a
-
-# Hold the terminal for few seconds
-sleep 5
 
 # Ask container name from the user
 echo $NAME
 read container_name
 
+# Displaying the number of containers present
+echo "The name and status of the container: "
+docker ps -a | grep $container_name 
+
 # Hold the terminal for few seconds
-sleep 3
+sleep 5
+
 
 # Start my container
 docker start $container_name
