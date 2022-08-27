@@ -27,7 +27,8 @@ read container_name
 
 # Displaying the number of containers present
 echo "Your docker containers is:"
-docker ps -a | grep $container_name #| awk '{print $7}'
+# docker ps -a | grep $container_name #| awk '{print $7}'
+docker ps -a | grep 'STATUS\|'$container_name''
 
 # Hold the terminal for few seconds
 sleep 5
