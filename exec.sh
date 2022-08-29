@@ -14,10 +14,10 @@ sleep 3
 
 
 # Ask container name from the user
-echo $NAME
-read container_name
+# echo $NAME
+read -p "$NAME --> " container_name
 
-# Displaying the number of containers present
+# Display the name and status of the container
 echo "The name and status of the container: "
 docker ps -a | grep $container_name 
 
